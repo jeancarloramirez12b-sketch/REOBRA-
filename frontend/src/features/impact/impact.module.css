@@ -1,0 +1,110 @@
+.metrics,
+.panel,
+.bars,
+.needs,
+.catalog {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.metrics {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.panel,
+.metric {
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(13, 19, 28, 0.86);
+  min-width: 0;
+}
+
+.metric strong,
+.bar strong,
+.need strong {
+  color: #f4fffa;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.metric p,
+.panel p,
+.need p,
+.note {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.filters,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: end;
+}
+
+.filters > * {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.bars,
+.needs,
+.catalog {
+  grid-template-columns: 1fr;
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 8rem) minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  align-items: center;
+  min-width: 0;
+}
+
+.track {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(42, 212, 255, 0.12);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #3dffb0, #2ad4ff);
+}
+
+.need,
+.factor {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  padding-top: var(--space-3);
+  border-top: 2px solid var(--accent);
+}
+
+.definition {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.definition summary {
+  cursor: pointer;
+  color: #f4fffa;
+  font-weight: 650;
+}
+
+.fields {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (max-width: 700px) {
+  .bar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

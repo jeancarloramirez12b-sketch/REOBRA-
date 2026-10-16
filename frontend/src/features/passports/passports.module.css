@@ -1,0 +1,163 @@
+.layout,
+.sheet,
+.timeline {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.filters,
+.cardHead,
+.actions,
+.meta,
+.qrRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.filters {
+  align-items: end;
+}
+
+.list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card,
+.panel {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(13, 19, 28, 0.86);
+}
+
+.card h2,
+.panel h2 {
+  margin: 0;
+  color: #f4fffa;
+}
+
+.code,
+.meta,
+.time {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  overflow-wrap: anywhere;
+}
+
+.qr {
+  width: min(100%, 12rem);
+  height: auto;
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  background: #070b11;
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.facts div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.facts dt {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  display: grid;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(61, 255, 176, 0.45);
+}
+
+.gallery,
+.documents {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.photo {
+  width: 100%;
+  max-height: 16rem;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.banner,
+.success {
+  margin: 0;
+  padding: 0.8rem 0.9rem;
+  border-radius: var(--radius-sm);
+}
+
+.banner {
+  border: 1px solid rgba(255, 107, 122, 0.45);
+  background: var(--danger-bg);
+  color: #ffd5da;
+}
+
+.success {
+  border: 1px solid rgba(61, 255, 176, 0.4);
+  background: var(--ok-bg);
+  color: #e8fff6;
+}
+
+.note {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (min-width: 800px) {
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media print {
+  :global(aside),
+  :global(header),
+  .actions,
+  .filters {
+    display: none !important;
+  }
+
+  .panel,
+  .card {
+    break-inside: avoid;
+    background: #fff;
+    color: #111;
+  }
+}

@@ -1,0 +1,36 @@
+.field {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.label {
+  color: #d5e4de;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(4, 8, 12, 0.55);
+  color: var(--ink);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.error {
+  color: #ffd0d6;
+  font-size: var(--text-sm);
+}

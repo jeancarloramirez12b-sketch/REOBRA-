@@ -1,0 +1,100 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 4.5rem;
+  padding: 0.75rem var(--page-padding);
+  border-bottom: 1px solid rgba(61, 255, 176, 0.14);
+  background: rgba(7, 11, 17, 0.78);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.menu {
+  display: none;
+}
+
+.heading {
+  display: grid;
+  flex: 1 1 auto;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.title {
+  min-width: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #f4fffa;
+}
+
+.account {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem 0.85rem;
+  min-width: 0;
+}
+
+.account a,
+.account button {
+  color: var(--accent);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.org {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.org span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.org select {
+  max-width: 14rem;
+  min-height: 2.25rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(4, 8, 12, 0.55);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 900px) {
+  .menu {
+    display: grid;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .heading,
+  .account {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+}

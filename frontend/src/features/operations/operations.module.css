@@ -1,0 +1,88 @@
+.layout,
+.card,
+.panel,
+.timeline {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.layout {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.card,
+.panel {
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(13, 19, 28, 0.86);
+}
+
+.card p,
+.panel p,
+.timeline li {
+  overflow-wrap: anywhere;
+}
+
+.actions,
+.filters,
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: end;
+}
+
+.fields {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.fields label,
+.timeline li {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.fields input,
+.fields select,
+.fields textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  padding-top: var(--space-3);
+  border-top: 2px solid var(--accent);
+}
+
+.note {
+  color: var(--text-muted, #b7c4d4);
+}
+
+.quantities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.quantities div {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.quantities dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "reobra-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "API de REOBRA",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc -p tsconfig.typecheck.json --noEmit --pretty false",
+    "test": "tsx --test --test-concurrency=1 src/config.test.ts src/health.test.ts src/database/sql-script.test.ts src/database/migration-files.test.ts src/database/schema.test.ts src/modules/auth/passwords.test.ts src/modules/auth/identity.integration.test.ts src/modules/materials/storage.test.ts src/modules/materials/materials.integration.test.ts src/modules/passports/public-code.test.ts src/modules/passports/qr.test.ts src/modules/passports/passports.integration.test.ts src/modules/projects/states.test.ts src/modules/projects/projects.integration.test.ts src/modules/matching/score.test.ts src/modules/matching/matching.integration.test.ts src/modules/operations/states.test.ts src/modules/operations/operations.integration.test.ts src/modules/impact/indicators.test.ts src/modules/impact/impact.integration.test.ts src/modules/ai/assistant.rules.test.ts src/modules/ai/ai.integration.test.ts",
+    "db:migrate": "tsx src/database/migrate-cli.ts",
+    "db:status": "tsx src/database/status-cli.ts",
+    "db:verify": "tsx src/database/verify-cli.ts",
+    "db:rollback": "tsx src/database/rollback-cli.ts"
+  },
+  "dependencies": {
+    "@types/multer": "^1.4.12",
+    "argon2": "^0.43.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^2.4.0",
+    "mysql2": "^3.11.4",
+    "qrcode": "^1.5.4",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.4",
+    "@types/qrcode": "^1.5.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

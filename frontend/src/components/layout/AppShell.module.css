@@ -1,0 +1,73 @@
+.shell {
+  min-height: 100dvh;
+}
+
+.skip {
+  position: fixed;
+  left: 1rem;
+  top: -3rem;
+  z-index: 50;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  border: 0;
+  background: rgba(2, 4, 8, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.mainColumn {
+  min-width: 0;
+  min-height: 100dvh;
+}
+
+.content {
+  padding: 1.75rem var(--page-padding) 3rem;
+}
+
+.contentInner {
+  display: grid;
+  gap: var(--space-5);
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  animation: enter 420ms ease;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 901px) {
+  .shell {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  }
+
+  .shell[data-collapsed='true'] {
+    --sidebar-width: var(--sidebar-collapsed);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contentInner {
+    animation: none;
+  }
+}

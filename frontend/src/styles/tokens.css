@@ -1,0 +1,61 @@
+:root {
+  --void: #04060a;
+  --canvas: #070b11;
+  --surface: #0d131c;
+  --surface-raised: #121a25;
+  --ink: #e8f3ee;
+  --graphite: #1c2836;
+  --muted: #8b9aab;
+  --line: rgba(130, 190, 220, 0.16);
+  --line-strong: rgba(61, 255, 176, 0.55);
+  --accent: #3dffb0;
+  --accent-2: #2ad4ff;
+  --accent-dim: rgba(61, 255, 176, 0.12);
+  --accent-glow: rgba(61, 255, 176, 0.28);
+  --warning-bg: rgba(255, 196, 77, 0.12);
+  --warning-fg: #ffc44d;
+  --ok-bg: rgba(61, 255, 176, 0.1);
+  --ok-fg: #3dffb0;
+  --danger-bg: rgba(255, 92, 108, 0.12);
+  --danger-fg: #ff6b7a;
+  --checking-bg: rgba(42, 212, 255, 0.1);
+  --checking-fg: #2ad4ff;
+  --sidebar-text: #e8f3ee;
+  --sidebar-muted: #7f90a3;
+  --font-sans: 'Outfit', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.15rem;
+  --text-xl: clamp(1.75rem, 3vw, 2.35rem);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --sidebar-width: 17.5rem;
+  --sidebar-collapsed: 4.75rem;
+  --header-height: 4.5rem;
+  --page-padding: 2rem;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 0 0 1px rgba(61, 255, 176, 0.04), 0 18px 48px rgba(0, 0, 0, 0.38);
+  --shadow-sm: 0 0 0 1px rgba(130, 190, 220, 0.08);
+  color-scheme: dark;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-padding: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-padding: 1rem;
+  }
+}

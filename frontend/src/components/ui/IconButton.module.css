@@ -1,0 +1,19 @@
+.button {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(61, 255, 176, 0.28);
+  border-radius: var(--radius-sm);
+  background: rgba(61, 255, 176, 0.06);
+  color: var(--accent);
+}
+
+.button:hover:not(:disabled) {
+  background: rgba(61, 255, 176, 0.14);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

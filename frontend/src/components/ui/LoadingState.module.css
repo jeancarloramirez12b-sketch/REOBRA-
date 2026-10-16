@@ -1,0 +1,32 @@
+.loading {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-4);
+  border: 1px solid rgba(42, 212, 255, 0.28);
+  border-radius: var(--radius);
+  background: var(--checking-bg);
+}
+
+.photo {
+  grid-row: 1 / span 3;
+  width: 8.5rem;
+  height: 5.5rem;
+}
+
+.loading p {
+  color: var(--checking-fg);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .loading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .photo {
+    grid-row: auto;
+    width: 100%;
+  }
+}

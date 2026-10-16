@@ -1,0 +1,60 @@
+.layout,
+.card,
+.panel {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card,
+.panel {
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(13, 19, 28, 0.86);
+}
+
+.filters,
+.actions,
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: end;
+}
+
+.factors {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.factor {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.track {
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.track span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--cyan, #2ad4ff));
+}
+
+.unknown {
+  color: var(--warning, #e6c36a);
+}
+
+.note,
+.disclaimer {
+  color: var(--text-muted, #b7c4d4);
+}
+
+.score {
+  font-size: var(--text-xl);
+  color: var(--accent);
+}

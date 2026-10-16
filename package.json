@@ -1,0 +1,31 @@
+{
+  "name": "reobra",
+  "private": true,
+  "version": "0.1.0",
+  "description": "REOBRA — gestión trazable de materiales recuperables de la construcción",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend -c green,blue npm:dev:frontend npm:dev:backend",
+    "dev:frontend": "npm run dev -w reobra-frontend",
+    "dev:backend": "npm run dev -w reobra-backend",
+    "build": "npm run build -w reobra-frontend && npm run build -w reobra-backend",
+    "build:frontend": "npm run build -w reobra-frontend",
+    "build:backend": "npm run build -w reobra-backend",
+    "typecheck": "npm run typecheck -w reobra-frontend && npm run typecheck -w reobra-backend",
+    "test": "npm run test -w reobra-backend && npm run test -w reobra-frontend",
+    "start:backend": "npm run start -w reobra-backend",
+    "db:migrate": "npm run db:migrate -w reobra-backend",
+    "db:status": "npm run db:status -w reobra-backend",
+    "db:verify": "npm run db:verify -w reobra-backend",
+    "db:rollback": "npm run db:rollback -w reobra-backend --"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

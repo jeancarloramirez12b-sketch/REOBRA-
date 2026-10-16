@@ -1,0 +1,129 @@
+.narrow {
+  display: grid;
+  gap: var(--space-4);
+  width: min(40rem, 100%);
+}
+
+.form,
+.stack {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.banner {
+  margin: 0;
+  padding: 0.8rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 107, 122, 0.45);
+  background: var(--danger-bg);
+  color: #ffd5da;
+}
+
+.check {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  color: var(--ink);
+  font-size: var(--text-sm);
+}
+
+.check input {
+  margin-top: 0.2rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.members,
+.inviteList {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.member {
+  display: grid;
+  gap: var(--space-3);
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(7, 12, 18, 0.72);
+}
+
+.member header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  align-items: baseline;
+}
+
+.member h3,
+.tokenTitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.token {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(61, 255, 176, 0.35);
+  border-radius: var(--radius);
+  background: rgba(61, 255, 176, 0.06);
+}
+
+.token textarea {
+  width: 100%;
+  min-height: 4.5rem;
+  resize: vertical;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(4, 8, 12, 0.7);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.selector {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.selector span {
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
+.selector select {
+  max-width: 16rem;
+  min-height: 2.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(4, 8, 12, 0.55);
+  color: var(--ink);
+  padding: 0.2rem 0.7rem;
+}
+
+@media (min-width: 760px) {
+  .member {
+    grid-template-columns: minmax(0, 1.4fr) minmax(12rem, 0.8fr);
+    align-items: end;
+  }
+
+  .member header {
+    display: block;
+  }
+}

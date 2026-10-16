@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acceso directo · REOBRA</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --canvas: #070b11;
+        --ink: #e8f3ee;
+        --muted: #8b9aab;
+        --accent: #3dffb0;
+        --line: #24343c;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--canvas);
+      }
+      main {
+        width: min(46rem, calc(100% - 2rem));
+        margin: 2.5rem auto 3rem;
+      }
+      h1 { margin: 0.2rem 0 0.6rem; font-size: 1.8rem; }
+      p { color: var(--muted); line-height: 1.5; }
+      ol { display: grid; gap: 0.55rem; padding: 0; margin: 1.5rem 0 0; list-style: none; }
+      a {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.85rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      a:hover, a:focus-visible { border-color: var(--accent); outline: none; }
+      span { color: var(--accent); font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>REOBRA · acceso directo</p>
+      <h1>Abrir la aplicación</h1>
+      <p>
+        Este archivo solo ordena los enlaces. No sustituye la aplicación React ni guarda datos.
+        Primero ejecuta <code>npm run dev</code> en la carpeta REOBRA.
+      </p>
+      <ol>
+        <li><a href="http://localhost:5173/">1. Inicio <span>Público</span></a></li>
+        <li><a href="http://localhost:5173/inventario">2. Inventario de materiales <span>Informativo</span></a></li>
+        <li><a href="http://localhost:5173/pasaporte">3. Pasaporte digital <span>Informativo</span></a></li>
+        <li><a href="http://localhost:5173/proyectos">4. Proyectos <span>Informativo</span></a></li>
+        <li><a href="http://localhost:5173/compatibilidad">5. Compatibilidad <span>Informativo</span></a></li>
+        <li><a href="http://localhost:5173/solicitudes">6. Solicitudes y entregas <span>Informativo</span></a></li>
+        <li><a href="http://localhost:5173/impacto">7. Impacto <span>Informativo</span></a></li>
+        <li><a href="http://localhost:5173/configuracion">8. Configuración <span>Público</span></a></li>
+        <li><a href="http://localhost:5173/registro">9. Crear cuenta <span>Identidad</span></a></li>
+        <li><a href="http://localhost:5173/ingresar">10. Ingresar <span>Identidad</span></a></li>
+        <li><a href="http://localhost:5173/perfil">11. Mi perfil <span>Sesión</span></a></li>
+        <li><a href="http://localhost:5173/organizaciones">12. Mis organizaciones <span>Sesión</span></a></li>
+        <li><a href="http://localhost:5173/organizaciones/nueva">13. Crear organización <span>Sesión</span></a></li>
+        <li><a href="http://localhost:5173/invitacion">14. Aceptar invitación <span>Sesión</span></a></li>
+      </ol>
+    </main>
+  </body>
+</html>

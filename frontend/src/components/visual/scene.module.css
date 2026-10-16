@@ -1,0 +1,69 @@
+.banner,
+.still,
+.thumb {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #0a1018;
+}
+
+.banner {
+  height: 13.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.still,
+.thumb,
+.banner img,
+.still img,
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner img,
+.still img,
+.thumb img {
+  animation: drift 24s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.still {
+  height: 8.5rem;
+  border-radius: var(--radius);
+}
+
+.thumb {
+  height: 5.5rem;
+  border-radius: 10px;
+}
+
+@keyframes drift {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: scale(1.08) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .banner {
+    height: 8.5rem;
+  }
+
+  .still {
+    height: 7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner img,
+  .still img,
+  .thumb img {
+    animation: none;
+  }
+}

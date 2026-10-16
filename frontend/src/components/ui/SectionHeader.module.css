@@ -1,0 +1,9 @@
+.header {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.header p {
+  max-width: 46rem;
+  color: var(--muted);
+}

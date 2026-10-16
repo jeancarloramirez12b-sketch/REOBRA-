@@ -1,0 +1,151 @@
+.copilot,
+.panel,
+.guide {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(8, 16, 24, 0.72);
+}
+
+.copilotHead,
+.row,
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards,
+.layout,
+.messages {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.layout {
+  grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+}
+
+.card,
+.message,
+.conversation {
+  min-width: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.message[data-role='user'] {
+  border-color: rgba(42, 212, 255, 0.35);
+}
+
+.kicker,
+.basis {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.messages {
+  max-height: 32rem;
+  overflow: auto;
+}
+
+textarea,
+.composer input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  min-height: 6rem;
+  padding: 0.7rem 0.8rem;
+}
+
+.composer {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.composer input {
+  min-height: 2.75rem;
+  padding: 0.55rem 0.8rem;
+}
+
+.conversations {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+}
+
+.conversationRow {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.conversation {
+  text-align: left;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.conversation[aria-current='true'] {
+  border-color: var(--accent);
+}
+
+.status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.error {
+  margin: 0;
+  color: #ffb4b4;
+}
+
+.notice {
+  margin: 0;
+  color: var(--accent);
+}
+
+.disclaimer {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hiddenTitle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.guide ul,
+.card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
