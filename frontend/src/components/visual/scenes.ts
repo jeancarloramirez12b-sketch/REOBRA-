@@ -17,43 +17,43 @@ export type Scene = {
 
 export const scenes: Record<SceneId, Scene> = {
   home: {
-    src: '/scenes/reobra-home.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-home.jpg`,
     alt: 'Patio circular de ladrillos, madera y acero recuperados',
   },
   inventory: {
-    src: '/scenes/reobra-inventory.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-inventory.jpg`,
     alt: 'Bodega con ladrillos, tablas y vigas ordenados para reutilizar',
   },
   passport: {
-    src: '/scenes/reobra-passport.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-passport.jpg`,
     alt: 'Viga de madera y ladrillos con una placa de identificación',
   },
   project: {
-    src: '/scenes/reobra-project.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-project.jpg`,
     alt: 'Obra de concreto con materiales recuperados preparados al frente',
   },
   matching: {
-    src: '/scenes/reobra-matching.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-matching.jpg`,
     alt: 'Dos grupos de materiales recuperados enfrentados para compararlos',
   },
   logistics: {
-    src: '/scenes/reobra-logistics.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-logistics.jpg`,
     alt: 'Bultos de ladrillo y madera listos para una entrega',
   },
   impact: {
-    src: '/scenes/reobra-impact.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-impact.jpg`,
     alt: 'Plantas creciendo entre ladrillos y madera recuperados',
   },
   assistant: {
-    src: '/scenes/reobra-assistant.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-assistant.jpg`,
     alt: 'Mesa de trabajo con muestras de ladrillo, madera y una pantalla oscura',
   },
   auth: {
-    src: '/scenes/reobra-auth.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-auth.jpg`,
     alt: 'Entrada nocturna de un patio de materiales recuperados',
   },
   organization: {
-    src: '/scenes/reobra-organization.jpg',
+    src: `${import.meta.env.BASE_URL}scenes/reobra-organization.jpg`,
     alt: 'Banco de taller con cascos, guantes y muestras de materiales',
   },
 }
