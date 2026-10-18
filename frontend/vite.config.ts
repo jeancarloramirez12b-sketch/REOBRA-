@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/REOBRA-/', //name of repository
   server: {
     host: 'localhost',
     port: 5173,
