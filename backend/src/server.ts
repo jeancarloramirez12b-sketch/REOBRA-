@@ -13,7 +13,7 @@ function start(): void {
   }
 
   const app = createApp(config)
-  const server = app.listen(config.port, '127.0.0.1', () => {
+  const server = app.listen(config.port, '0.0.0.0', () => {
     console.log(`REOBRA backend escuchando en http://localhost:${config.port}`)
   })
 
