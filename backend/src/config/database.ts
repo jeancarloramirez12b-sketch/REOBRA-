@@ -81,6 +81,7 @@ export function getPool(): Pool {
     connectTimeout: 5000,
     enableKeepAlive: true,
     charset: 'utf8mb4',
+    ssl: { rejectUnauthorized: false }
   })
 
   return pool
