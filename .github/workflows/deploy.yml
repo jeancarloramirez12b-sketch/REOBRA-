@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ] # ⚠️ Si tu rama principal se llama "master", cámbialo aquí.
+    branches: [ "main" ] 
   workflow_dispatch:
 
 permissions:
@@ -27,10 +27,12 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install # 👈 Cambiado de npm ci a npm install
+        run: npm install 
 
       - name: Build frontend
         run: npm run build -w reobra-frontend
+        env:
+         VITE_API_BASE_URL: https://reobra-backend.onrender.com
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
