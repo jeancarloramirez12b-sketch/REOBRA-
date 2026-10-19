@@ -1,5 +1,4 @@
 import { exec } from 'child_process'
-import path from 'path'
 import cors from 'cors'
 import express from 'express'
 import type { AppConfig } from './config/env.js'
@@ -55,19 +54,19 @@ export function createApp(config: AppConfig) {
   app.use('/api/measurement-units', requireSession(secureCookies), createUnitsRouter())
   app.use(notFoundHandler)
   app.use(errorHandler) 
-   // RUTA TEMPORAL PARA MIGRACIONES EN RENDER
-app.get('/api/run-migrations', (req, res) => {
-  // Ejecutamos el comando de migración
-  exec('npm run db:migrate', (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Error ejecutando migraciones: ${error.message}`)
-      return res.status(500).json({ error: error.message, details: stderr })
-    }
-    console.log(`Migraciones ejecutadas: ${stdout}`)
-    res.json({ success: true, output: stdout })
-  })
-})
-// FIN DE LA RUTA TEMPORAL
+
+  // RUTA TEMPORAL PARA MIGRACIONES EN RENDER (Corregida)
+    app.get('/api/run-migrations', (_req, res) => {
+      exec('npm run db:migrate', (error, stdout, stderr) => {
+        if (error) {
+          console.error(`Error ejecutando migraciones: ${error.message}`)
+          return res.status(500).json({ error: error.message, details: stderr })
+        }
+        console.log(`Migraciones ejecutadas: ${stdout}`)
+        res.json({ success: true, output: stdout })
+      })
+    })
+    // FIN DE LA RUTA TEMPORAL
 
 return app
   
