@@ -52,23 +52,22 @@ export function createApp(config: AppConfig) {
   app.use('/api/ai', createAiRouter(secureCookies))
   app.use('/api/material-categories', requireSession(secureCookies), createCategoriesRouter())
   app.use('/api/measurement-units', requireSession(secureCookies), createUnitsRouter())
+  
+  // ---> RUTA TEMPORAL AQUÍ <---
+  app.get('/api/run-migrations', (_req, res) => {
+    exec('npm run db:migrate -w reobra-backend', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error ejecutando migraciones: ${error.message}`)
+        return res.status(500).json({ error: error.message, details: stderr })
+      }
+      console.log(`Migraciones ejecutadas: ${stdout}`)
+      res.json({ success: true, output: stdout })
+    })
+  })
+  // -----------------------------------------------------------------
+
   app.use(notFoundHandler)
   app.use(errorHandler) 
 
-  // RUTA TEMPORAL PARA MIGRACIONES EN RENDER (Corregida)
-    app.get('/api/run-migrations', (_req, res) => {
-      exec('npm run db:migrate', (error, stdout, stderr) => {
-        if (error) {
-          console.error(`Error ejecutando migraciones: ${error.message}`)
-          return res.status(500).json({ error: error.message, details: stderr })
-        }
-        console.log(`Migraciones ejecutadas: ${stdout}`)
-        res.json({ success: true, output: stdout })
-      })
-    })
-    // FIN DE LA RUTA TEMPORAL
-
-return app
-  
   return app
 }
